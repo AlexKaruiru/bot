@@ -18,7 +18,7 @@ const Header = () => {
       wrap='wrap'
       py='6'
       px='6'
-      bgColor='blue.200'
+      bgColor='purple.500'
       w='100%'
       pos='fixed'
       zIndex='9999'
