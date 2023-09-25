@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex, Box } from '@chakra-ui/react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Footer from './components/Footer';
+import Header from './components/Header';
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <BrowserRouter>
+      <Header />
+      <Flex as='main' mt='72px' direction='row' bgColor='white.900'>
+        <Box flex='1' p='6' overflow='auto'>
+          
+          <Routes>
+            <Route path='/' element={<HomeScreen />} />
+          </Routes>
+        </Box>
+      </Flex>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
